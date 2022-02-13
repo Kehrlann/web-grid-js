@@ -64,19 +64,7 @@
             <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/appendChild" target="_">.appendChild(...)</a></li>
           </ul>
         </p>
-        <h2>Step 2: remove a line</h2>
-        <p>
-          Add a <code>Remove a line button</code>. When the user clicks that
-          button, a row should be removed from the grid.
-          </p>
-          <p>
-          See:
-          <ul>
-            <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/removeChild" target="_">.removeChild(...)</a> on the parent</li>
-            <li>Or <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/remove" target="_">.remove(...)</a> on a child</li>
-          </ul>
-        </p>
-        <h2>Step 3: clicking a square</h2>
+        <h2>Step 2: clicking a square</h2>
         <p>
           When the user clicks any of the squares, it should change color.
         </p>
@@ -88,14 +76,14 @@
             <li><a href="https://www.w3schools.com/jsref/event_onclick.asp" target="_">onclick</a> (caveat: that's consider not-so-great 🤷‍♀️)</li>
           </ul>
         </p>
-        <h2>Step 3bis: check it works on new lines, too</h2>
+        <h2>Step 2-bis: check it works on new lines, too</h2>
         <p>
           Make sure that when a new line is added, the squares on that line are clickable too!
         </p>
         <p>
           See: everything above.
         </p>
-        <h2>Step 3ter: BONUS - the color of the square should be random</h2>
+        <h2>Step 2-ter: BONUS - the color of the square should be random</h2>
         <p>
           When the user clicks on a square, the color should be random.
         </p>
@@ -106,7 +94,7 @@
             <li>Or use <a href="https://duckduckgo.com/?q=javascript+random+color" target="_">DuckDuckGo</a> or whatever you like</li>
           </ul>
         </p>
-        <h2>Step 4: Hover on the squares should color them blue</h2>
+        <h2>Step 3: Hover on the squares should color them blue</h2>
         <p>
           When the user puts their mouse over a square, it should turn the square blue. The square should remain blue.
           This should happen by adding a class to the square. When the square is clicked, it should keep its "clicked" color.
@@ -121,7 +109,7 @@
             <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/mouseenter_event" target="_">'mouseenter'</a> event</li>
           </ul>
         </p>
-        <h2>Step 5: Count the squares</h2>
+        <h2>Step 4: Count the squares</h2>
         <p>
           Add some text below the grid (maybe in an <code>&lt;ul&gt;&lt;/ul&gt;</code> tag?) that counts the number of "original" squares,
           the number of clicked squares, the number of blue squares, the total number of squares. It should ALWAYS be up to date.
@@ -147,6 +135,25 @@
         <p>
           Note: this is a bit free form. You may need to introduce additional classes. Or have a javascript variable. Or whatever.
         </p>
+        <h2>Step 5: remove a line</h2>
+        <p>
+          Add a <code>Remove a line button</code>. When the user clicks that
+          button, a row should be removed from the grid.
+        </p>
+        <p>
+          <b>NOTE:</b> this is harder than it seems. The childNodes property is somewhat like a list in Python. So if you
+          delete stuff from it while iterating, it <i>will</i> have uninteded consequences. 
+          First, list the nodes you want to remove, and in a second loop, remove them.
+        </p>
+        <p>
+          See:
+          <ul>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/childNodes" target="_">childNodes</a></li>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/removeChild" target="_">.removeChild(...)</a> on the parent</li>
+            <li>Or <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/remove" target="_">.remove(...)</a> on a child</li>
+          </ul>
+        </p>
+
       </div>
     </div>
   </body>
