@@ -9,6 +9,12 @@ document.addEventListener("DOMContentLoaded", () => {
       grid.appendChild(document.createElement("div"));
     }
   });
+
+  document.getElementById("grid").childNodes.forEach((value) =>
+    value.addEventListener("click", (event) => {
+      event.target.style.backgroundColor = "blue";
+    })
+  );
 });
 
 /**
