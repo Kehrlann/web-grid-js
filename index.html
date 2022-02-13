@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>👩‍🔬 The web grid</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="code.js"></script>
+  </head>
+  <body>
+    <div id="main">
+      <div id="grid">
+        <!-- Ligne 1 -->
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <!-- Ligne 2 -->
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <!-- Ligne 3 -->
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+      </div>
+      <button id="btn-add-line">Add a line</button>
+      <hr />
+      <div id="instructions">
+        <h2>Step 1: add a line</h2>
+        <p>
+          Edit the <code>code.js file</code> so that when the user clicks the
+          <code>Add a line</code> button, a new line with 10 squares is added to
+          the grid.
+          </p>
+          <p>
+          See:
+          <ul>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementById" target="_">.getElementById(...)</a></li>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener" target="_">addEventlistener</a></li>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/click_event" target="_">'click'</a> event</li>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/append" target="_">.append(...)</a></li>
+            <li>Optionally, <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement" target="_">.createElement(...)</a></li>
+          </ul>
+        </p>
+        <h2>Step 2: remove a line</h2>
+        <p>
+          Add a <code>Remove a line button</code>. When the user clicks that
+          button, a row should be removed from the grid.
+          </p>
+          <p>
+          See:
+          <ul>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/removeChild" target="_">.append(...)</a> on the parent</li>
+            <li>Or <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/remove" target="_">.remove(...)</a> on a child</li>
+          </ul>
+        </p>
+        <h2>Step 3: clicking a square</h2>
+        <p>
+          When the user clicks any of the squares, it should change color.
+        </p>
+        <p>
+          See:
+          <ul>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/style" target="_">.style</a> (.style.color = ...)</li>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/click_event" target="_">'click'</a> event</li>
+            <li><a href="https://www.w3schools.com/jsref/event_onclick.asp" target="_">onclick</a> (caveat: that's consider not-so-great 🤷‍♀️)</li>
+          </ul>
+        </p>
+        <h2>Step 3bis: check it works on new lines, too</h2>
+        <p>
+          Make sure that when a new line is added, the squares on that line are clickable too!
+        </p>
+        <p>
+          See: everything above.
+        </p>
+        <h2>Step 3ter: BONUS - the color of the square should be random</h2>
+        <p>
+          When the user clicks on a square, the color should be random.
+        </p>
+        <p>
+          See:
+          <ul>
+            <li>Yep, you can <a href="https://google.fr/search?q=javascript+random+color" target="_">Google it</a></li>
+            <li>Or use <a href="https://duckduckgo.com/?q=javascript+random+color" target="_">DuckDuckGo</a> or whatever you like</li>
+          </ul>
+        </p>
+        <h2>Step 4: Hover on the squares should color them blue</h2>
+        <p>
+          When the user puts their mouse over a square, it should turn the square blue. The square should remain blue.
+          This should happen by adding a class to the square. When the square is clicked, it should keep its "clicked" color.
+        </p>
+        <p>
+          <b>Caveat:</b> make sure it works on new lines!
+        </p>
+        <p>
+          See:
+          <ul>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/classList" target="_">classList</a></li>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/mouseenter_event" target="_">'mouseenter'</a> event</li>
+          </ul>
+        </p>
+        <h2>Step 5: Count the squares</h2>
+        <p>
+          Add some text below the grid (maybe in an <code>&lt;ul&gt;&lt;/ul&gt;</code> tag?) that counts the number of "original" squares,
+          the number of clicked squares, the number of blue squares, the total number of squares. It should ALWAYS be up to date.
+          Note that <code>original + clicked + blue = total</code>. Also note that <code>total % 10 == 0</code>.
+        </p>
+        <p>
+          For example:
+          <ul>
+            <li>Original squares: 12</li>
+            <li>Clicked squares: 5</li>
+            <li>Blue squares: 3</li>
+            <li>Total squares: 20</li>
+          </ul>
+        </p>
+        <p>
+          See:
+          <ul>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/innerText" target="_">innerText</a></li>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelectorAll" target="_">querySelectorAll</a>, which returns ...</li>
+            <li>... a <a href="https://developer.mozilla.org/en-US/docs/Web/API/NodeList" target="_">NodeList</a></li>
+          </ul>
+        </p>
+        <p>
+          Note: this is a bit free form. You may need to introduce additional classes. Or have a javascript variable. Or whatever.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
