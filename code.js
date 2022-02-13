@@ -6,19 +6,26 @@ document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("btn-add-line").addEventListener("click", (evt) => {
     const grid = document.getElementById("grid");
     for (let index = 0; index < 10; index++) {
-      const div = document.createElement("div")
+      const div = document.createElement("div");
       div.addEventListener("click", squareClicked);
+      div.addEventListener("mouseenter", squareHovered);
       grid.appendChild(div);
     }
   });
 
-  document.getElementById("grid").childNodes.forEach((value) =>
-    value.addEventListener("click", squareClicked)
-  );
+  document.getElementById("grid").childNodes.forEach((value) => {
+    value.addEventListener("click", squareClicked);
+    value.addEventListener("mouseenter", squareHovered);
+  });
 });
 
 function squareClicked(evt) {
-  evt.target.style.backgroundColor = "#" + ('00000'+(Math.random()*(1<<24)|0).toString(16)).slice(-6);
+  evt.target.style.backgroundColor =
+    "#" + ("00000" + ((Math.random() * (1 << 24)) | 0).toString(16)).slice(-6);
+}
+
+function squareHovered(evt) {
+  evt.target.classList.add("hovered");
 }
 
 /**

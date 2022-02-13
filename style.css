@@ -28,6 +28,10 @@ h2 {
   background-color: lightcoral;
 }
 
+#grid > .hovered {
+  background-color: blue;
+}
+
 #instructions {
   width: 600px;
 }
