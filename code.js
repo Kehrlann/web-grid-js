@@ -11,6 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
       div.addEventListener("mouseenter", squareHovered);
       grid.appendChild(div);
     }
+    updateCounts();
   });
 
   document.getElementById("grid").childNodes.forEach((value) => {
@@ -22,10 +23,23 @@ document.addEventListener("DOMContentLoaded", () => {
 function squareClicked(evt) {
   evt.target.style.backgroundColor =
     "#" + ("00000" + ((Math.random() * (1 << 24)) | 0).toString(16)).slice(-6);
+  evt.target.classList.add("clicked");
+  updateCounts();
 }
 
 function squareHovered(evt) {
   evt.target.classList.add("hovered");
+  updateCounts();
+}
+
+function updateCounts() {
+  const total = document.getElementById("grid").childElementCount;
+  const blue = document.querySelectorAll(".hovered").length;
+  const clicked = document.querySelectorAll(".clicked").length;
+  document.getElementById("original").textContent = total - blue - clicked;
+  document.getElementById("clicked").textContent = clicked;
+  document.getElementById("blue").textContent = blue;
+  document.getElementById("total").textContent = total;
 }
 
 /**
