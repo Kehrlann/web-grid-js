@@ -14,6 +14,23 @@ document.addEventListener("DOMContentLoaded", () => {
     updateCounts();
   });
 
+  document
+    .getElementById("btn-remove-line")
+    .addEventListener("click", (evt) => {
+      const grid = document.getElementById("grid");
+      const total = grid.childElementCount;
+      const toRemove = [];
+      grid.childNodes.forEach((element, index) => {
+        if (index >= total - 10) {
+          toRemove.push(element);
+        }
+      });
+      for (const node of toRemove) {
+        node.remove();
+      }
+      updateCounts();
+    });
+
   document.getElementById("grid").childNodes.forEach((value) => {
     value.addEventListener("click", squareClicked);
     value.addEventListener("mouseenter", squareHovered);
