@@ -7,17 +7,19 @@ document.addEventListener("DOMContentLoaded", () => {
     const grid = document.getElementById("grid");
     for (let index = 0; index < 10; index++) {
       const div = document.createElement("div")
-      div.addEventListener("click", evt => evt.target.style.backgroundColor = "blue");
+      div.addEventListener("click", squareClicked);
       grid.appendChild(div);
     }
   });
 
   document.getElementById("grid").childNodes.forEach((value) =>
-    value.addEventListener("click", (event) => {
-      event.target.style.backgroundColor = "blue";
-    })
+    value.addEventListener("click", squareClicked)
   );
 });
+
+function squareClicked(evt) {
+  evt.target.style.backgroundColor = "#" + ('00000'+(Math.random()*(1<<24)|0).toString(16)).slice(-6);
+}
 
 /**
  * Cleans up the document so that the exercise is easier.
