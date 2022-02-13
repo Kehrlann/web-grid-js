@@ -1,3 +1,3 @@
-document.addEventListener('load', () => {
+document.addEventListener('DOMContentLoaded', () => {
   // Hey! Pssst! In here ...
 });
