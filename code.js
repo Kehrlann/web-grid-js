@@ -1,0 +1,3 @@
+document.addEventListener('load', () => {
+  // Hey! Pssst! In here ...
+});
