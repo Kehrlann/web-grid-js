@@ -6,7 +6,9 @@ document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("btn-add-line").addEventListener("click", (evt) => {
     const grid = document.getElementById("grid");
     for (let index = 0; index < 10; index++) {
-      grid.appendChild(document.createElement("div"));
+      const div = document.createElement("div")
+      div.addEventListener("click", evt => evt.target.style.backgroundColor = "blue");
+      grid.appendChild(div);
     }
   });
 
