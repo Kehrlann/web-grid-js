@@ -3,6 +3,12 @@ document.addEventListener("DOMContentLoaded", () => {
   initialCleanup();
 
   // Hey! Pssst! In here ...
+  document.getElementById("btn-add-line").addEventListener("click", (evt) => {
+    const grid = document.getElementById("grid");
+    for (let index = 0; index < 10; index++) {
+      grid.appendChild(document.createElement("div"));
+    }
+  });
 });
 
 /**
