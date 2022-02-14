@@ -4,6 +4,8 @@ code {
 
 h2 {
   margin-top: 3rem;
+  padding-top: 1em;
+  border-top: 2px solid blue;
 }
 
 #main {
