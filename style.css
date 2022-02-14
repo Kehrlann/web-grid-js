@@ -31,3 +31,7 @@ h2 {
 #instructions {
   width: 600px;
 }
+
+#grid .hovered {
+  background-color: blue;
+}
